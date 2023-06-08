@@ -1,12 +1,12 @@
 import "./App.css";
 import Banner from "./components/Banner/Banner";
-import Forms from "./components/Forms/Forms";
+import FormContainer from "./components/FormContainer/FormContainer";
 
 function App() {
   return (
     <div className="App">
       <Banner />
-      <Forms />
+      <FormContainer />
     </div>
   );
 }

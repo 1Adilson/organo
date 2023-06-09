@@ -1,5 +1,5 @@
-import "./Forms.css";
-const Forms = (props) => {
+import "./Form.css";
+const Form = (props) => {
   return (
     <div className="text-form">
       <label>{props.label}</label>
@@ -8,4 +8,4 @@ const Forms = (props) => {
   );
 };
 
-export default Forms;
+export default Form;

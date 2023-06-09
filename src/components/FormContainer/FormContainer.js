@@ -1,14 +1,27 @@
-import Forms from "../Forms/Forms";
+import Button from "../Button/Button";
+import DropDownList from "../DropDownList/DropDownList";
+import Form from "../Form/Form";
 import "./FormContainer.css";
 
 const FormContainer = () => {
+  const times = [
+    "Programação",
+    "Front-end",
+    "Data Science",
+    "Devops",
+    "UX e Design",
+    "Mobile",
+    "Inovação e Gestão",
+  ];
   return (
     <section className="formContainer">
       <form>
         <h2>Preencha os dados para criar o card do colabarador </h2>
-        <Forms label="Nome" placeholder="Informa seu nome" />
-        <Forms label="Cargo" placeholder="Informe seu cargo" />
-        <Forms label="Imagem" placeholder="Informe seu endereço de imagem" />
+        <Form label="Nome" placeholder="Informa seu nome" />
+        <Form label="Cargo" placeholder="Informe seu cargo" />
+        <Form label="Imagem" placeholder="Informe seu endereço de imagem" />
+        <DropDownList label="Time" items={times} />
+        <Button text="Criar Card" />
       </form>
     </section>
   );

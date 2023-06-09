@@ -1,10 +1,13 @@
 import "./DropDownList.css";
 
 const DropDownList = (props) => {
+  const handleValue = (event) => {
+    props.changed(event.target.value);
+  };
   return (
     <div className="dropDownList">
       <label>{props.label}</label>
-      <select>
+      <select onChange={handleValue} value={props.formValue}>
         {props.items.map((item) => (
           <option key={item}>{item}</option>
         ))}

@@ -5,16 +5,6 @@ import Form from "../Form/Form";
 import "./FormContainer.css";
 
 const FormContainer = (props) => {
-  const times = [
-    "Programação",
-    "Front-end",
-    "Data Science",
-    "Devops",
-    "UX e Design",
-    "Mobile",
-    "Inovação e Gestão",
-  ];
-
   const [name, setName] = useState("");
   const [office, setOffice] = useState("");
   const [image, setImage] = useState("");
@@ -59,7 +49,7 @@ const FormContainer = (props) => {
         <DropDownList
           validate={true}
           label="Time"
-          items={times}
+          items={props.teams}
           formValue={team}
           changed={(team) => setTeam(team)}
         />

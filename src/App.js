@@ -69,7 +69,7 @@ function App() {
             primaryColor={item.primaryColor}
             secundaryColor={item.secundaryColor}
             key={item.id}
-          />
+          ></Team>
         );
       })}
     </div>

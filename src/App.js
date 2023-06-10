@@ -7,8 +7,8 @@ import Team from "./components/Team/Team";
 function App() {
   const [users, setUsers] = useState([]);
 
+  console.log(users);
   const handleUser = (user) => {
-    console.log(users);
     setUsers([...users, user]);
   };
 
@@ -63,12 +63,14 @@ function App() {
       <Banner />
       <FormContainer addUser={(user) => handleUser(user)} teams={teamsNames} />
       {teams.map((item) => {
+        console.log(item);
         return (
           <Team
             name={item.name}
             primaryColor={item.primaryColor}
             secundaryColor={item.secundaryColor}
             key={item.id}
+            users={users.filter((filter) => filter.team === item.name)}
           ></Team>
         );
       })}

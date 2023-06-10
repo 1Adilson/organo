@@ -1,7 +1,6 @@
 import React from "react";
 import "./Team.css";
 import User from "../User/User";
-// import User from "../User/User";
 
 const Team = (props) => {
   return (
@@ -15,6 +14,8 @@ const Team = (props) => {
           {props.users.map((item) => {
             return (
               <User
+                color={props.primaryColor}
+                key={item.name}
                 userName={item.name}
                 userOficce={item.office}
                 userImg={item.image}
